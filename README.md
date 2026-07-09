@@ -27,5 +27,5 @@ end
 - Finally, complete the `Key System` to publish your playlist.
 ### Add songs to your playlist.
 - Click on the three dots next to the desired song.
-- Select the `"ADD TO PLAYLIST"` option.
-- And that's it, just select which playlist you want to add it to.
+- Select the `"Add to Playlist"` option.
+- Okay, just select the playlist you want to add to the playlist.
