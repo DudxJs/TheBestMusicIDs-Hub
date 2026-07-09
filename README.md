@@ -10,7 +10,13 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/DudxJs/ExploitUnivers
 Basic tutorials on how to use the [TheBestMusicIDs](https://github.com/DudxJs/ExploitUniverseStudio/blob/main/TheBestMusicIDs) script.
 > **Find it Quickly**
 > [Music Section](##Music-Section)
-> - jd
+> - [How to publish a song](###How-to-publish-a-song)
+> - [Edit your published music](###Edit-your-published-music)
+> - [Listen to the music posted (yours or another user's)](###Listen-to-the-music-posted-(yours-or-another-user's))
+> [Playlists Section](##Playlists-Section)
+> - [How to get the playlist ID](###How-to-get-the-playlist-ID)
+> - [How to create a playlist](###How-to-create-a-playlist)
+> - [Add songs to your playlist](###Add-songs-to-your-playlist)
 
 ## Music Section
 > [!Important]
@@ -23,11 +29,11 @@ Basic tutorials on how to use the [TheBestMusicIDs](https://github.com/DudxJs/Ex
 - Click on `"Publish Music"`
 - Please verify that this is indeed the song you wish to publish.
 - Finally, perform the Key System to publish the music!
-### Edit your published music.
+### Edit your published music
 - Click on the three dots next to your already [published](###How-to-publish-a-song) song.
 - A panel will appear for you to make your changes.
 - When you're finished editing, click `"Save changes"` and complete the `Key System`.
-### Listen to the music posted (yours or another user's).
+### Listen to the music posted (yours or another user's)
 - Click on the three dots next to the desired song.
 - Select the "Listen to Music" option.
 - It will open a professional audio player for you.
@@ -53,7 +59,7 @@ end
 - Go to the `"Playlists"` section.
 - Click on "Create New Playlist" and edit your new playlist.
 - Finally, complete the `Key System` to publish your playlist.
-### Add songs to your playlist.
+### Add songs to your playlist
 - Click on the three dots next to the desired song.
 - Select the `"Add to Playlist"` option.
 - Okay, just select the playlist you want to add to the playlist.
