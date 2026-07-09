@@ -8,6 +8,9 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/DudxJs/ExploitUnivers
 
 # Tutorials
 Basic tutorials on how to use the [TheBestMusicIDs](https://github.com/DudxJs/ExploitUniverseStudio/blob/main/TheBestMusicIDs) script.
+> **Find it Quickly**
+> [Music Section](##Music-Section)
+> - jd
 
 ## Music Section
 > [!Important]
