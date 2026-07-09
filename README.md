@@ -20,7 +20,7 @@ for _, song in ipairs(playlist) do
 end
 ```
 ### How to get the playlist ID
-- Access the desired player's `profile` in the script [TheBestMusicIDs](https://github.com/DudxJs/ExploitUniverseStudio/blob/main/TheBestMusicIDs)
+- Access the desired player's `profile` in the script [TheBestMusicIDs](#The-Best-Music-ID's---Hub)
 - Go to the `"Playlists"` section.
 - Choose the player's `public playlist`.
 - Click on the three dots and select the `"Share"` option.
@@ -37,3 +37,4 @@ end
 ## Music Section
 > [!Important]
 > The [TheBestMusicIDs](#The-Best-Music-ID's---Hub) does not publish any type of custom song file/URL!
+> 
