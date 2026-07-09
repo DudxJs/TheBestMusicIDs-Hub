@@ -8,6 +8,18 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/DudxJs/ExploitUnivers
 
 # Tutorials
 Basic tutorials on how to use the [TheBestMusicIDs](https://github.com/DudxJs/ExploitUniverseStudio/blob/main/TheBestMusicIDs) script.
+## Music Section
+> [!Important]
+> The [TheBestMusicIDs](#The-Best-Music-ID's---Hub) does not publish any type of custom song file/URL!
+> Only IDs already **Available** in the official Roblox store!
+### How to publish a song
+- First, have the song ID on hand.
+- Go to the "Publish" page.
+- Please fill in the required information as requested.
+- Click on `"Publish Music"`
+- Please verify that this is indeed the song you wish to publish.
+- Finally, perform the Key System to publish the music!
+
 ## Playlists Section
 The script is capable of creating playlists, and you can use it in your own scripts!
 > Example:
@@ -33,15 +45,3 @@ end
 - Click on the three dots next to the desired song.
 - Select the `"Add to Playlist"` option.
 - Okay, just select the playlist you want to add to the playlist.
-
-## Music Section
-> [!Important]
-> The [TheBestMusicIDs](#The-Best-Music-ID's---Hub) does not publish any type of custom song file/URL!
-> Only IDs already **Available** in the official Roblox store!
-### How to publish a song
-- First, have the song ID on hand.
-- Go to the "Publish" page.
-- Please fill in the required information as requested.
-- Click on `"Publish Music"`
-- Please verify that this is indeed the song you wish to publish.
-- Finally, perform the Key System to publish the music!
