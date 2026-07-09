@@ -19,3 +19,4 @@ end
 * Choose the player's `public playlist`.
 * Click on the three dots and select the `"Share"` option.
 ## How to create a playlist
+*
