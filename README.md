@@ -12,7 +12,7 @@ Basic tutorials on how to use the [TheBestMusicIDs](https://github.com/DudxJs/Ex
 > [Music Section](##Music-Section)
 > - [How to publish a song](###How-to-publish-a-song)
 > - [Edit your published music](###Edit-your-published-music)
-> - [Listen to the music posted (yours or another user's)](###Listen-to-the-music-posted-(yours-or-another-user's))<br>
+> - [Listen to the music posted (yours or another user's)](###Listen-to-the-music-posted-(yours-or-another-user's))
 
 > [Playlists Section](##Playlists-Section)
 > - [How to get the playlist ID](###How-to-get-the-playlist-ID)
