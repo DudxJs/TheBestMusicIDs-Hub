@@ -2,7 +2,7 @@
 
 ---
 
-## Use playlists publicly!
+# Use playlists publicly!
 The script is capable of creating playlists, and you can use it in your own scripts!
 ``` lua
 _G.TMI_PLAYLIST_ID = "PLAYLIST_ID_HERE" -- Enter the ID of the playlist you want here!
@@ -12,5 +12,5 @@ for _, song in ipairs(playlist) do
     print(song.id, song.name, song.category, song.status)
 end
 ```
-### How to use?
+## How to use?
 - Access the desired player's profile in the script [TheBestMusicIDs](https://github.com/DudxJs/ExploitUniverseStudio/blob/main/TheBestMusicIDs)
