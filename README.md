@@ -28,7 +28,7 @@ Basic tutorials on how to use the [TheBestMusicIDs](https://github.com/DudxJs/Ex
 - Click on the three dots next to the desired song.
 - Select the "Listen to Music" option.
 - It will open a professional audio player for you.
-
+---
 ## Playlists Section
 The script is capable of creating playlists, and you can use it in your own scripts!
 > Example:
