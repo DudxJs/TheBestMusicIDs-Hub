@@ -9,19 +9,19 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/DudxJs/ExploitUnivers
 # Tutorials
 Basic tutorials on how to use the [TheBestMusicIDs](https://github.com/DudxJs/ExploitUniverseStudio/blob/main/TheBestMusicIDs) script.
 ## Find it Quickly
-> [**Music Section**](##Music-Section)
-> - [How to publish a song](###How-to-publish-a-song)
-> - [Edit your published music](###Edit-your-published-music)
-> - [Listen to the music posted (yours or another user's)](###Listen-to-the-music-posted-(yours-or-another-user's))
+> [**Music Section**](#music-section)
+> - [How to publish a song](#how-to-publish-a-song)
+> - [Edit your published music](#edit-your-published-music)
+> - [Listen to the music posted (yours or another user's)](#listen-to-the-music-posted-yours-or-another-users)
 
-> [**Playlists Section**](##Playlists-Section)
-> - [How to get the playlist ID](###How-to-get-the-playlist-ID)
-> - [How to create a playlist](###How-to-create-a-playlist)
-> - [Add songs to your playlist](###Add-songs-to-your-playlist)
+> [**Playlists Section**](#playlists-section)
+> - [How to get the playlist ID](#how-to-get-the-playlist-id)
+> - [How to create a playlist](#how-to-create-a-playlist)
+> - [Add songs to your playlist](#add-songs-to-your-playlist)
 
 ## Music Section
 > [!Important]
-> The [TheBestMusicIDs](#The-Best-Music-ID's---Hub) does not publish any type of custom song file/URL!
+> The [TheBestMusicIDs](#the-best-music-ids---hub) does not publish any type of custom song file/URL!
 > Only IDs already **Available** in the official Roblox store!
 ### How to publish a song
 - First, have the song ID on hand.
@@ -31,7 +31,7 @@ Basic tutorials on how to use the [TheBestMusicIDs](https://github.com/DudxJs/Ex
 - Please verify that this is indeed the song you wish to publish.
 - Finally, perform the Key System to publish the music!
 ### Edit your published music
-- Click on the three dots next to your already [published](###How-to-publish-a-song) song.
+- Click on the three dots next to your already [published](#how-to-publish-a-song) song.
 - A panel will appear for you to make your changes.
 - When you're finished editing, click `"Save changes"` and complete the `Key System`.
 ### Listen to the music posted (yours or another user's)
@@ -51,7 +51,7 @@ for _, song in ipairs(playlist) do
 end
 ```
 ### How to get the playlist ID
-- Access the desired player's `profile` in the script [TheBestMusicIDs](#The-Best-Music-ID's---Hub)
+- Access the desired player's `profile` in the script [TheBestMusicIDs](#the-best-music-ids---hub)
 - Go to the `"Playlists"` section.
 - Choose the player's `public playlist`.
 - Click on the three dots and select the `"Share"` option.
