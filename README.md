@@ -37,4 +37,11 @@ end
 ## Music Section
 > [!Important]
 > The [TheBestMusicIDs](#The-Best-Music-ID's---Hub) does not publish any type of custom song file/URL!
-> 
+> Only IDs already **Available** in the official Roblox store!
+### How to publish a song
+- First, have the song ID on hand.
+- Go to the "Publish" page.
+- Please fill in the required information as requested.
+- Click on `"Publish Music"`
+- Please verify that this is indeed the song you wish to publish.
+- Finally, perform the Key System to publish the music!
