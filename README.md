@@ -8,6 +8,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/DudxJs/ExploitUnivers
 
 # Tutorials
 Basic tutorials on how to use the [TheBestMusicIDs](https://github.com/DudxJs/ExploitUniverseStudio/blob/main/TheBestMusicIDs) script.
+
 ## Music Section
 > [!Important]
 > The [TheBestMusicIDs](#The-Best-Music-ID's---Hub) does not publish any type of custom song file/URL!
@@ -19,6 +20,8 @@ Basic tutorials on how to use the [TheBestMusicIDs](https://github.com/DudxJs/Ex
 - Click on `"Publish Music"`
 - Please verify that this is indeed the song you wish to publish.
 - Finally, perform the Key System to publish the music!
+### Edit your published music.
+- Click on the three dots next to your already [published](###How-to-publish-a-song) song.
 
 ## Playlists Section
 The script is capable of creating playlists, and you can use it in your own scripts!
