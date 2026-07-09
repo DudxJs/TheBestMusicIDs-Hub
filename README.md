@@ -1,4 +1,8 @@
 ![The Best Music ID's - Hub](https://github.com/DudxJs/TheBestMusicIDs-Hub/blob/main/assets/TheBestMusicIDs.png)
+# The Best Music ID's - Hub
+``` lua
+loadstring(game:HttpGet("https://raw.githubusercontent.com/DudxJs/ExploitUniverseStudio/refs/heads/main/TheBestMusicIDs"))()
+```
 
 ---
 
@@ -29,3 +33,7 @@ end
 - Click on the three dots next to the desired song.
 - Select the `"Add to Playlist"` option.
 - Okay, just select the playlist you want to add to the playlist.
+
+## Music Section
+> [!Important]
+> The [TheBestMusicIDs](#The-Best-Music-ID's---Hub) does not publish any type of custom song file/URL!
