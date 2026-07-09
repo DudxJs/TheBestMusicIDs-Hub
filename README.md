@@ -8,13 +8,13 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/DudxJs/ExploitUnivers
 
 # Tutorials
 Basic tutorials on how to use the [TheBestMusicIDs](https://github.com/DudxJs/ExploitUniverseStudio/blob/main/TheBestMusicIDs) script.
-## **Find it Quickly**
-> [Music Section](##Music-Section)
+## Find it Quickly
+> **[Music Section](##Music-Section)**
 > - [How to publish a song](###How-to-publish-a-song)
 > - [Edit your published music](###Edit-your-published-music)
 > - [Listen to the music posted (yours or another user's)](###Listen-to-the-music-posted-(yours-or-another-user's))
 
-> [Playlists Section](##Playlists-Section)
+> **[Playlists Section](##Playlists-Section)**
 > - [How to get the playlist ID](###How-to-get-the-playlist-ID)
 > - [How to create a playlist](###How-to-create-a-playlist)
 > - [Add songs to your playlist](###Add-songs-to-your-playlist)
