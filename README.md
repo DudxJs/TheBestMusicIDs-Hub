@@ -1,4 +1,4 @@
-# TheBestMusicIDs-Hub
+# The Best Music ID's - Hub
 
 ---
 
