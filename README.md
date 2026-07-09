@@ -14,4 +14,5 @@ for _, song in ipairs(playlist) do
 end
 ```
 ## How to use?
-- Access the desired player's profile in the script [TheBestMusicIDs](https://github.com/DudxJs/ExploitUniverseStudio/blob/main/TheBestMusicIDs)
+- Access the desired player's `profile` in the script [TheBestMusicIDs](https://github.com/DudxJs/ExploitUniverseStudio/blob/main/TheBestMusicIDs)
+- Go to the `"Playlists"` section.
