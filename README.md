@@ -22,6 +22,12 @@ Basic tutorials on how to use the [TheBestMusicIDs](https://github.com/DudxJs/Ex
 - Finally, perform the Key System to publish the music!
 ### Edit your published music.
 - Click on the three dots next to your already [published](###How-to-publish-a-song) song.
+- A panel will appear for you to make your changes.
+- When you're finished editing, click `"Save changes"` and complete the `Key System`.
+### Listen to the music posted (yours or another user's).
+- Click on the three dots next to the desired song.
+- Select the "Listen to Music" option.
+- It will open a professional audio player for you.
 
 ## Playlists Section
 The script is capable of creating playlists, and you can use it in your own scripts!
