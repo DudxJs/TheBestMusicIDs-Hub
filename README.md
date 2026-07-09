@@ -3,8 +3,9 @@
 ---
 
 # Use playlists publicly!
-The script is capable of creating playlists, and you can use it in your own scripts!<br>
-*Example:*
+The script is capable of creating playlists, and you can use it in your own scripts!
+
+<small> Example:
 ``` lua
 _G.TMI_PLAYLIST_ID = "PLAYLIST_ID_HERE" -- Enter the ID of the playlist you want here!
 local playlist = loadstring(game:HttpGet('https://raw.githubusercontent.com/DudxJs/ExploitUniverseStudio/refs/heads/main/TheBestMusicIDs'))()
