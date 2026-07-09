@@ -7,7 +7,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/DudxJs/ExploitUnivers
 ---
 
 # Tutorials
-Basic tutorials on how to use the [TheBestMusicIDs](https://github.com/DudxJs/ExploitUniverseStudio/blob/main/TheBestMusicIDs) script.
+Basic tutorials on how to use the [TheBestMusicIDs](the-best-music-ids---hub) script.
 ## Find it Quickly
 > [**Music Section**](#music-section)
 > - [How to publish a song](#how-to-publish-a-song)
