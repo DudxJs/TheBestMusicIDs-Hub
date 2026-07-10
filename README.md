@@ -236,21 +236,21 @@ TheBestMusicIDs (loader)
 
 ---
 
-## 🆕 Changelog
+## <img src="https://caas.du.edu.om/wp-content/uploads/2023/09/new.gif" height="24"> Changelog
 
 > Check the in-app **Home** tab for the most up-to-date changelog — new entries are added there first.
 
 ---
 
-## ⚠️ Disclaimer
+## <img src="https://cdn.pixabay.com/animation/2023/04/28/18/34/18-34-10-554_512.gif" height="24"> Disclaimer
 
 - This script only references **official Roblox audio IDs** already available on the platform. It does not host, upload, or stream any third-party/custom audio files.
 - Use of external scripts/executors is subject to Roblox's Terms of Service. Use at your own risk.
 
 ---
 
-## 🙌 Credits
+## <img src="https://cdn.dribbble.com/userupload/21713352/file/original-404c0e41dc756a6410c4f6896c5b4df5.gif" height="24"> Credits
 
 Developed and maintained by **[DudxJs](https://github.com/DudxJs)**.
 
-If you enjoy the project, consider leaving a ⭐ on the repository!
+If you enjoy the project, consider leaving a <img src="https://i.pinimg.com/originals/23/15/2a/23152ad938857f99ee19485d608ef091.gif" height="24"> on the repository!
