@@ -104,10 +104,10 @@ All data (music entries, likes, follows, playlists) is stored in a **Supabase** 
 
 ## Tutorials
 
-Basic tutorials on how to use the **TheBestMusicIDs** script.
+Basic tutorials on how to use the [TheBestMusicIDs](#the-best-music-ids---hub) script.
 
 > [!IMPORTANT]
-> **TheBestMusicIDs** does **not** publish any type of custom song file or external URL. Only IDs **already available** in the official Roblox audio catalog can be submitted.
+> [TheBestMusicIDs](#the-best-music-ids---hub) does **not** publish any type of custom song file or external URL. Only IDs **already available** in the official Roblox audio catalog can be submitted.
 
 ### Music Section
 
