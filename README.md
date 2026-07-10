@@ -249,7 +249,7 @@ TheBestMusicIDs (loader)
 
 ---
 
-## <img src="https://github.com/DudxJs/TheBestMusicIDs-Hub/blob/main/assets/copyright.gif" height="24"> Credits
+## <img src="https://github.com/DudxJs/TheBestMusicIDs-Hub/blob/main/assets/copyright.gif" height="27"> Credits
 
 Developed and maintained by **[DudxJs](https://github.com/DudxJs)**.
 
