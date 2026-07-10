@@ -117,13 +117,13 @@ Basic tutorials on how to use the **TheBestMusicIDs** script.
 3. Fill in the required information (ID, name, category).
 4. Click **"Publish Music"**.
 5. Confirm that the preview shown is indeed the song you want to publish.
-6. Complete the **Key System** to finish publishing.
+6. Complete the [Key System](#key-system) to finish publishing.
 
 #### Edit your published music
 1. Click the three dots (`⋯`) next to your already [published](#how-to-publish-a-song) song.
 2. A panel will open with your song's editable fields.
 3. Make your changes and click **"Save changes"**.
-4. Complete the **Key System** to confirm the edit.
+4. Complete the [Key System](#key-system) to confirm the edit.
 
 #### Listen to the music posted (yours or another user's)
 1. Click the three dots (`⋯`) next to the desired song.
