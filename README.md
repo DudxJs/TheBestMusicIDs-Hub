@@ -58,7 +58,8 @@ The interface is fully custom-made: floating panels, animated RGB strokes, tab s
 
 ---
 
-## ✨ Features
+## <img src="https://github.com/DudxJs/TheBestMusicIDs-Hub/blob/main/assets/features.png" height="24"> Features
+
 
 | Category | What you get |
 |---|---|
