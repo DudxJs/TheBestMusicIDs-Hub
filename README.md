@@ -14,7 +14,8 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/DudxJs/ExploitUnivers
 
 ---
 
-## 📖 Table of Contents
+## <img src="https://github.com/DudxJs/TheBestMusicIDs-Hub/blob/main/assets/SearchContents.png" height="20" style="filter: invert(1);">
+Table of Contents
 
 - [About](#-about)
 - [Features](#-features)
@@ -130,7 +131,7 @@ Basic tutorials on how to use the **TheBestMusicIDs** script.
 3. A dedicated audio player opens with a circular visualizer and interactive timeline — play, pause, seek and restart freely.
 
 #### Like a song
-1. Click the <img src="https://github.com/DudxJs/TheBestMusicIDs-Hub/blob/main/assets/like.png" height="18"> icon on any song card.
+1. Click the <img src="https://github.com/DudxJs/TheBestMusicIDs-Hub/blob/main/assets/like.png" height="20"> icon on any song card.
 2. Your like is saved instantly and contributes to that song's ranking and the poster's leaderboard score.
 3. Click again to unlike.
 
