@@ -249,6 +249,19 @@ TheBestMusicIDs (loader)
 
 ---
 
+## Executors
+> [!tip]
+> Executors needed to run the [TheBestMusicIDs](#the-best-music-ids---hub) script.
+
+### Delta Android
+Click to [Download](https://deltaexploits.gg/delta-executor-android)
+### Delta iOS
+Click to [Download](https://deltaexploits.gg/delta-executor-ios)
+### Madium PC
+Click to [Download](https://getmadium.net/)
+
+---
+
 ## <img src="https://github.com/DudxJs/TheBestMusicIDs-Hub/blob/main/assets/copyright.gif" height="27"> Credits
 
 Developed and maintained by **[DudxJs](https://github.com/DudxJs)**.
