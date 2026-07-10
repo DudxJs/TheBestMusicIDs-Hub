@@ -44,7 +44,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/DudxJs/ExploitUnivers
 
 ---
 
-## 📌 About
+## <img src="https://github.com/DudxJs/TheBestMusicIDs-Hub/blob/main/assets/about.gif" height="24"> About
 
 **TheBestMusicIDs** is not just a script — it's a mini social network for Roblox audio IDs, built entirely with custom Lua UI (no Roblox Studio, no external GUI libraries). It lets any player:
 
