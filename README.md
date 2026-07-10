@@ -46,7 +46,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/DudxJs/ExploitUnivers
 
 ## <img src="https://github.com/DudxJs/TheBestMusicIDs-Hub/blob/main/assets/about.gif" height="24"> About
 
-**TheBestMusicIDs** is not just a script — it's a mini social network for Roblox audio IDs, built entirely with custom Lua UI (no Roblox Studio, no external GUI libraries). It lets any player:
+[TheBestMusicIDs](#the-best-music-ids---hub) is not just a script — it's a mini social network for Roblox audio IDs, built entirely with custom Lua UI (no Roblox Studio, no external GUI libraries). It lets any player:
 
 - Publish and share **official Roblox audio IDs** (the script never hosts or plays custom/pirated audio files — only IDs that exist in the real Roblox catalog);
 - Browse, filter, search and sort everyone's submissions;
