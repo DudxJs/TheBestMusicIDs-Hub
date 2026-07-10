@@ -78,7 +78,7 @@ The interface is fully custom-made: floating panels, animated RGB strokes, tab s
 
 ---
 
-## ⚙️ How It Works
+## <img src="https://github.com/DudxJs/TheBestMusicIDs-Hub/blob/main/assets/process.png" height="24"> How It Works
 
 The script uses a **modular loader architecture**. When you run the loadstring above, it:
 
@@ -196,13 +196,13 @@ The **Home** tab shows:
 
 ---
 
-## 🔐 Key System
+## <img src="https://github.com/DudxJs/TheBestMusicIDs-Hub/blob/main/assets/key.png" height="24"> Key System
 
 To prevent spam and abuse, any action that writes data (**publishing**, **editing**, **creating a playlist**) requires completing a **Key System** check before the request is sent. The key panel is reused across all these flows, so the experience is always consistent.
 
 ---
 
-## 🚦 Audio Status System
+## <img src="https://media0.giphy.com/media/v1.Y2lkPTZjMDliOTUyemJtY2F2d3ZzOHNhYTZobnNycHViMDZveHV6ZGxla3plZTA1bWNwNSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/S1xV8cDgf7xJu/200.webp" height="24"> Audio Status System
 
 Every song ID is periodically validated against Roblox. Statuses are cached per session so the same ID isn't re-checked repeatedly, and are shown directly on each music card:
 
