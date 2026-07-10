@@ -255,7 +255,7 @@ TheBestMusicIDs (loader)
 
 ## Executors
 > [!tip]
-> These executables are necessary in order to run the [TheBestMusicIDs](#the-best-music-ids---hub) script.
+> You need to have one of these to run the [TheBestMusicIDs](#the-best-music-ids---hub) script.
 
 ### Delta Android
 Click to [Download](https://deltaexploits.gg/delta-executor-android)
