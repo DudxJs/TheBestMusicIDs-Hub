@@ -255,3 +255,4 @@ TheBestMusicIDs (loader)
 Developed and maintained by **[DudxJs](https://github.com/DudxJs)**.
 
 If you enjoy the project, consider leaving a ⭐ on the repository!
+Clique em <img src="https://github.com/DudxJs/TheBestMusicIDs-Hub/blob/main/assets/TheBestMusicIDs.png" height="20"> para curtir.
