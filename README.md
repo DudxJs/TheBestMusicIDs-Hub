@@ -40,6 +40,10 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/DudxJs/ExploitUnivers
 - [Project Architecture](#-project-architecture)
 - [Changelog](#-changelog)
 - [Disclaimer](#-disclaimer)
+- [Executors](#-executors)
+  - [Delta Android](#delta-android)
+  - [Delta iOS](#delta-ios)
+  - [Madium PC](#madium-pc)
 - [Credits](#-credits)
 
 ---
@@ -251,7 +255,7 @@ TheBestMusicIDs (loader)
 
 ## Executors
 > [!tip]
-> Executors needed to run the [TheBestMusicIDs](#the-best-music-ids---hub) script.
+> These executables are necessary in order to run the [TheBestMusicIDs](#the-best-music-ids---hub) script.
 
 ### Delta Android
 Click to [Download](https://deltaexploits.gg/delta-executor-android)
