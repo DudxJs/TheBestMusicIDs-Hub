@@ -216,7 +216,7 @@ Any player who encounters a status change contributes an update to the shared da
 
 ---
 
-## <img src="https://cdn-icons-png.flaticon.com/512/4538/4538996.png" height="24"> Project Architecture
+## <img src="https://cdn-icons-png.flaticon.com/512/4539/4539064.png" height="24"> Project Architecture
 
 ```
 TheBestMusicIDs (loader)
