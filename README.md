@@ -14,7 +14,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/DudxJs/ExploitUnivers
 
 ---
 
-## <img src="https://github.com/DudxJs/TheBestMusicIDs-Hub/blob/main/assets/SearchContents.png" height="20" style="filter: invert(1);"> Table of Contents
+## <img src="https://github.com/DudxJs/TheBestMusicIDs-Hub/blob/main/assets/SearchContents.GIF" height="24"> Table of Contents
 
 - [About](#-about)
 - [Features](#-features)
