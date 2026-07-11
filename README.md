@@ -8,7 +8,7 @@ A social music-ID hub for Roblox executors: publish, discover, listen, like, fol
 loadstring(game:HttpGet("https://raw.githubusercontent.com/DudxJs/ExploitUniverseStudio/refs/heads/main/TheBestMusicIDs"))()
 ```
 
-![Version](https://img.shields.io/badge/version-3.5-blueviolet)
+![Version](https://img.shields.io/badge/version-3.6-blueviolet)
 ![Status](https://img.shields.io/badge/status-active-brightgreen)
 ![Made with](https://img.shields.io/badge/made%20with-Lua-blue)
 
