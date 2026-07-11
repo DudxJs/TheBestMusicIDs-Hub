@@ -86,9 +86,8 @@ The interface is fully custom-made: floating panels, animated RGB strokes, tab s
 
 The script uses a **modular loader architecture**. When you run the loadstring above, it:
 
-1. Authenticates the request and points to the correct module folder (public build);
-2. Downloads and executes each module **in order** from GitHub, reporting progress (used to drive the splash screen);
-3. Boots the main GUI once every module has loaded successfully.
+1. Downloads and executes each module **in order** from GitHub, reporting progress (used to drive the splash screen);
+2. Boots the main GUI once every module has loaded successfully.
 
 ```
 config.lua        → constants, icons, colors, Supabase & Key System URLs, global cache/state
@@ -103,6 +102,8 @@ main_gui.lua       → main interface, tab system, Home page, entry point (main(
 ```
 
 All data (music entries, likes, follows, playlists) is stored in a **Supabase** backend and read/written through `api.lua`, so everything you publish is visible to every other user of the script in real time.
+
+Internally, no shared state ever touches `_G` — the loader passes a private table down to `main.lua`, which passes it to every module as a plain function argument. Nothing about the script's internal state is visible or reachable from other scripts running in the same executor.
 
 ---
 
@@ -151,10 +152,11 @@ The script can create playlists, and **you can consume them from your own script
 
 > Example:
 ```lua
-_G.TMI_PLAYLIST_ID = "PLAYLIST_ID_HERE" -- Enter the ID of the playlist you want here!
-local playlist = loadstring(game:HttpGet('https://raw.githubusercontent.com/DudxJs/ExploitUniverseStudio/refs/heads/main/TheBestMusicIDs'))()
+local TMI = loadstring(game:HttpGet('https://raw.githubusercontent.com/DudxJs/ExploitUniverseStudio/refs/heads/main/TheBestMusicIDs'))()
 
-for _, song in ipairs(playlist) do
+local songs = TMI:GetPlaylist("PLAYLIST_ID_HERE")
+
+for _, song in ipairs(songs) do
     print(song.id, song.name, song.category, song.status)
 end
 ```
@@ -177,7 +179,12 @@ end
 3. Choose the playlist you want to add the song to.
 
 #### Using a playlist in your own scripts
-As shown above, set `_G.TMI_PLAYLIST_ID` to the target playlist ID **before** loading the script. Instead of opening the GUI, the loader returns a plain Lua table of songs (`id`, `name`, `category`, `status`) that you can loop through in your own code — useful for building custom jukeboxes, auto-players, etc.
+As shown above, call `TMI:GetPlaylist("PLAYLIST_ID_HERE")` on the object returned by the loadstring. Instead of opening the GUI, it returns a plain Lua table of songs (`id`, `name`, `category`, `status`) that you can loop through in your own code — useful for building custom jukeboxes, auto-players, etc.
+
+Calling `GetPlaylist` cancels the GUI from opening automatically — nothing else changes about how you load the script. If you don't call it, `loadstring(...)()` behaves exactly like the one-liner at the top of this README and opens the interface normally, no extra calls needed.
+
+> [!NOTE]
+> `TMI:GetPlaylist(...)` must be called right after the `loadstring(...)()` line, with nothing yielding (no `task.wait`, no `wait()`) in between. The script decides whether to open the GUI at the end of the current execution step — calling `GetPlaylist` later than that won't cancel it anymore.
 
 ---
 
@@ -218,6 +225,8 @@ Every song ID is periodically validated against Roblox. Statuses are cached per 
 
 Any player who encounters a status change contributes an update to the shared database in the background, keeping the listings accurate for the whole community without needing a moderator.
 
+A single check is never enough to flip a song back from `banned`/`private` to `ok` — the script requires the problem to be at least 30 minutes old, then confirms `ok` twice in a row, a few seconds apart, before writing it back to the database. This prevents the status from flapping back and forth due to a one-off network hiccup.
+
 ---
 
 ## <img src="https://cdn-icons-png.flaticon.com/512/4539/4539064.png" height="24"> Project Architecture
@@ -236,7 +245,9 @@ TheBestMusicIDs (loader)
      └─ ui/main_gui.lua         — main interface, tabs, entry point
 ```
 
-`main.lua` will **refuse to run** unless it's invoked through the official loader (`TheBestMusicIDs`), which sets an internal auth token before dispatching to it. This prevents people from copy-pasting `main.lua` directly and skipping the loader flow.
+`main.lua` will **refuse to run** unless it's invoked through the official loader (`TheBestMusicIDs`), which calls it passing its own loader interface as a plain function argument. There's no global flag to fake — a direct `loadstring(mainLuaSource)()` simply receives no arguments and gets blocked with an on-screen warning telling the player to use the loader instead.
+
+Every module receives the shared `TMI` table the same way: as a function argument, never through `_G`. This keeps all internal state — including the Key System secret and Supabase credentials — invisible to any other script running in the same executor.
 
 ---
 
