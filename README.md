@@ -153,7 +153,6 @@ The script can create playlists, and **you can consume them from your own script
 > Example:
 ```lua
 local TMI = loadstring(game:HttpGet('https://raw.githubusercontent.com/DudxJs/ExploitUniverseStudio/refs/heads/main/TheBestMusicIDs'))()
-
 local songs = TMI:GetPlaylist("PLAYLIST_ID_HERE")
 
 for _, song in ipairs(songs) do
