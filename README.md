@@ -2,13 +2,13 @@
 
 # The Best Music ID's - Hub
 
-A social music-ID hub for Roblox executors: publish, discover, listen, like, follow and organize official Roblox audio IDs — with playlists, leaderboards, profiles and a real-time key system, all wrapped in a custom-built UI.
+The social music-ID hub for Roblox. Publish, discover, listen, like, follow and organize official Roblox audio IDs — with playlists, leaderboards, profiles and a smooth, custom-built interface.
 
 ```lua
 loadstring(game:HttpGet("https://raw.githubusercontent.com/DudxJs/ExploitUniverseStudio/refs/heads/main/TheBestMusicIDs"))()
 ```
 
-![Version](https://img.shields.io/badge/version-3.6-blueviolet)
+![Version](https://img.shields.io/badge/version-3.7-blueviolet)
 ![Status](https://img.shields.io/badge/status-active-brightgreen)
 ![Made with](https://img.shields.io/badge/made%20with-Lua-blue)
 
@@ -18,7 +18,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/DudxJs/ExploitUnivers
 
 - [About](#-about)
 - [Features](#-features)
-- [How It Works](#-how-it-works)
 - [Tutorials](#tutorials)
   - [Music Section](#music-section)
     - [How to publish a song](#how-to-publish-a-song)
@@ -30,6 +29,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/DudxJs/ExploitUnivers
     - [How to get the playlist ID](#how-to-get-the-playlist-id)
     - [How to create a playlist](#how-to-create-a-playlist)
     - [Add songs to your playlist](#add-songs-to-your-playlist)
+    - [Recovering a missing song](#recovering-a-missing-song)
     - [Using a playlist in your own scripts](#using-a-playlist-in-your-own-scripts)
   - [Profile Section](#profile-section)
     - [Follow / Unfollow players](#follow--unfollow-players)
@@ -37,7 +37,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/DudxJs/ExploitUnivers
   - [Home Section](#home-section)
 - [Key System](#-key-system)
 - [Audio Status System](#-audio-status-system)
-- [Project Architecture](#-project-architecture)
 - [Changelog](#-changelog)
 - [Disclaimer](#-disclaimer)
 - [Executors](#-executors)
@@ -50,20 +49,19 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/DudxJs/ExploitUnivers
 
 ## <img src="https://github.com/DudxJs/TheBestMusicIDs-Hub/blob/main/assets/about.gif" height="27"> About
 
-[TheBestMusicIDs](#the-best-music-ids---hub) is not just a script — it's a mini social network for Roblox audio IDs, built entirely with custom Lua UI (no Roblox Studio, no external GUI libraries). It lets any player:
+[TheBestMusicIDs](#the-best-music-ids---hub) is not just a script — it's a mini social network for Roblox audio IDs. It lets any player:
 
-- Publish and share **official Roblox audio IDs** (the script never hosts or plays custom/pirated audio files — only IDs that exist in the real Roblox catalog);
+- Publish and share **official Roblox audio IDs** — only IDs that exist in the real Roblox catalog, nothing custom or pirated;
 - Browse, filter, search and sort everyone's submissions;
 - Listen through a built-in circular-visualizer audio player;
 - Like, follow, and climb a global leaderboard;
-- Organize songs into public playlists that can even be consumed from **other scripts**.
+- Organize songs into public playlists that can even be used inside **your own scripts**.
 
-The interface is fully custom-made: floating panels, animated RGB strokes, tab systems with scroll-fade, splash screen, changelog cards on the Home page, and more — all built from scratch on top of Roblox's native UI instances.
+Floating panels, animated effects, smooth tabs, a splash screen and an in-app changelog — every screen is built to feel like a real app, not a script menu.
 
 ---
 
 ## <img src="https://github.com/DudxJs/TheBestMusicIDs-Hub/blob/main/assets/features.gif" height="24"> Features
-
 
 | Category | What you get |
 |---|---|
@@ -73,37 +71,11 @@ The interface is fully custom-made: floating panels, animated RGB strokes, tab s
 | ❤️ **Likes** | Like/unlike any song; like counts feed into sorting and the leaderboard |
 | 👥 **Follow System** | Follow/unfollow players, view followers/following lists |
 | 🏆 **Leaderboard** | Global Top 10 ranking based on likes and community engagement |
-| 📁 **Playlists** | Create playlists, add/remove songs, share via Playlist ID, and consume them externally |
+| 📁 **Playlists** | Create playlists, add/remove songs, recover missing songs, share via Playlist ID, and use them inside your own scripts |
 | 🔎 **Search & Filters** | Search by name, category, player, or ID; sort by newest/oldest or most liked |
-| 🚨 **Broken ID Detection** | Automatic detection of banned/private audios with visual banners and community-driven reporting |
-| 🔐 **Key System** | Anti-abuse key verification required before publishing, editing, or creating playlists |
+| 🚨 **Broken ID Detection** | Automatic detection of banned/private audios with visual banners, kept accurate by the whole community |
+| 🔐 **Key System** | Quick verification step before publishing, editing, or creating playlists, keeping the hub spam-free |
 | 🏠 **Home / Changelog** | In-app changelog with categorized update cards (added / removed / fixed) |
-| 🛡️ **Anti-Direct-Run Protection** | Core module refuses to run unless loaded through the official loader |
-
----
-
-## <img src="https://github.com/DudxJs/TheBestMusicIDs-Hub/blob/main/assets/process.png" height="24"> How It Works
-
-The script uses a **modular loader architecture**. When you run the loadstring above, it:
-
-1. Downloads and executes each module **in order** from GitHub, reporting progress (used to drive the splash screen);
-2. Boots the main GUI once every module has loaded successfully.
-
-```
-config.lua        → constants, icons, colors, Supabase & Key System URLs, global cache/state
-core.lua          → pure utility functions (buttons, switches, panels, formatting, etc.)
-api.lua           → Supabase requests: likes, follows, playlists, pagination, Roblox user lookups
-audio_player.lua  → the audio player screen (visualizer, timeline)
-ui_components.lua → reusable UI: splash screen, key system panel, music cards, playlist modals
-id_change_system.lua → ID editing, ID validation, and broken-audio reporting queue
-profile.lua       → user profile, leaderboard calculation, playlists, follow lists
-music_list.lua    → publish flow, music feed, filters/search, sorting
-main_gui.lua       → main interface, tab system, Home page, entry point (main())
-```
-
-All data (music entries, likes, follows, playlists) is stored in a **Supabase** backend and read/written through `api.lua`, so everything you publish is visible to every other user of the script in real time.
-
-Internally, no shared state ever touches `_G` — the loader passes a private table down to `main.lua`, which passes it to every module as a plain function argument. Nothing about the script's internal state is visible or reachable from other scripts running in the same executor.
 
 ---
 
@@ -141,14 +113,14 @@ Basic tutorials on how to use the [TheBestMusicIDs](#the-best-music-ids---hub) s
 3. Click again to unlike.
 
 #### Report a broken / banned ID
-- The script automatically checks each audio's status (OK / banned / private) and displays a colored banner on the song card when a problem is detected.
-- When any player encounters a broken ID, the script quietly reports it in the background (throttled, with retries) so the listing stays accurate for everyone — no manual action required.
+- The hub automatically checks each audio's status (OK / banned / private) and displays a colored banner on the song card when a problem is detected.
+- When any player encounters a broken ID, it's quietly reported in the background so the listing stays accurate for everyone — no manual action required.
 
 ---
 
 ### Playlists Section
 
-The script can create playlists, and **you can consume them from your own scripts** too.
+Create playlists, share them with anyone, and even **use them inside your own scripts**.
 
 > Example:
 ```lua
@@ -177,13 +149,20 @@ end
 2. Select **"Add to Playlist"**.
 3. Choose the playlist you want to add the song to.
 
-#### Using a playlist in your own scripts
-As shown above, call `TMI:GetPlaylist("PLAYLIST_ID_HERE")` on the object returned by the loadstring. Instead of opening the GUI, it returns a plain Lua table of songs (`id`, `name`, `category`, `status`) that you can loop through in your own code — useful for building custom jukeboxes, auto-players, etc.
+#### Recovering a missing song
+Sometimes a song inside your playlist stops being available (the original poster deleted it, it got banned, etc.). Instead of vanishing silently, it turns into a greyed-out **"Song Removed"** card so you always know what happened.
 
-Calling `GetPlaylist` cancels the GUI from opening automatically — nothing else changes about how you load the script. If you don't call it, `loadstring(...)()` behaves exactly like the one-liner at the top of this README and opens the interface normally, no extra calls needed.
+1. Open the greyed-out card.
+2. Flip the **"Remove from playlist"** switch.
+3. Confirm — the song is cleared from your playlist, no strings attached.
+
+#### Using a playlist in your own scripts
+As shown above, call `TMI:GetPlaylist("PLAYLIST_ID_HERE")` right after loading the script. Instead of opening the interface, it hands you back a simple list of songs (`id`, `name`, `category`, `status`) that you can loop through in your own code — perfect for custom jukeboxes, auto-players, and more.
+
+Calling `GetPlaylist` skips opening the interface automatically — nothing else changes about how you load the script. If you don't call it, `loadstring(...)()` behaves exactly like the one-liner at the top of this README and opens the interface normally.
 
 > [!NOTE]
-> `TMI:GetPlaylist(...)` must be called right after the `loadstring(...)()` line, with nothing yielding (no `task.wait`, no `wait()`) in between. The script decides whether to open the GUI at the end of the current execution step — calling `GetPlaylist` later than that won't cancel it anymore.
+> `TMI:GetPlaylist(...)` needs to be called right after the `loadstring(...)()` line, with no delay in between — otherwise the interface will already be on its way to opening.
 
 ---
 
@@ -208,13 +187,13 @@ The **Home** tab shows:
 
 ## <img src="https://github.com/DudxJs/TheBestMusicIDs-Hub/blob/main/assets/key.png" height="24"> Key System
 
-To prevent spam and abuse, any action that writes data (**publishing**, **editing**, **creating a playlist**) requires completing a **Key System** check before the request is sent. The key panel is reused across all these flows, so the experience is always consistent.
+To keep the hub spam-free, publishing a song, editing one, or creating a playlist asks for a quick verification step first. It's fast, consistent, and appears the same way across every action that needs it.
 
 ---
 
 ## <img src="https://media0.giphy.com/media/v1.Y2lkPTZjMDliOTUyemJtY2F2d3ZzOHNhYTZobnNycHViMDZveHV6ZGxla3plZTA1bWNwNSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/S1xV8cDgf7xJu/200.webp" height="24"> Audio Status System
 
-Every song ID is periodically validated against Roblox. Statuses are cached per session so the same ID isn't re-checked repeatedly, and are shown directly on each music card:
+Every song is kept up to date automatically. Each card shows its current status at a glance:
 
 | Status | Meaning | Banner |
 |---|---|---|
@@ -222,37 +201,18 @@ Every song ID is periodically validated against Roblox. Statuses are cached per 
 | 🚫 `banned` | Audio was taken down / doesn't exist | red banner |
 | 🔒 `private` | Audio exists but isn't public | yellow banner |
 
-Any player who encounters a status change contributes an update to the shared database in the background, keeping the listings accurate for the whole community without needing a moderator.
-
-A single check is never enough to flip a song back from `banned`/`private` to `ok` — the script requires the problem to be at least 30 minutes old, then confirms `ok` twice in a row, a few seconds apart, before writing it back to the database. This prevents the status from flapping back and forth due to a one-off network hiccup.
-
----
-
-## <img src="https://cdn-icons-png.flaticon.com/512/4539/4539064.png" height="24"> Project Architecture
-
-```
-TheBestMusicIDs (loader)
- └─ main.lua                — orchestrates module loading, order & error reporting
-     ├─ security/config.lua     — constants, icons, colors, cache/state
-     ├─ core.lua                — utility functions (buttons, panels, formatting)
-     ├─ security/api.lua        — Supabase + Key System requests
-     ├─ ui/audio_player.lua     — audio player screen
-     ├─ ui/ui_components.lua    — reusable UI building blocks
-     ├─ ui/id_change_system.lua — ID editing & broken-audio reporting
-     ├─ ui/profile.lua          — profile, leaderboard, playlists
-     ├─ data/music_list.lua     — publishing, feed, filters, search
-     └─ ui/main_gui.lua         — main interface, tabs, entry point
-```
-
-`main.lua` will **refuse to run** unless it's invoked through the official loader (`TheBestMusicIDs`), which calls it passing its own loader interface as a plain function argument. There's no global flag to fake — a direct `loadstring(mainLuaSource)()` simply receives no arguments and gets blocked with an on-screen warning telling the player to use the loader instead.
-
-Every module receives the shared `TMI` table the same way: as a function argument, never through `_G`. This keeps all internal state — including the Key System secret and Supabase credentials — invisible to any other script running in the same executor.
+The whole community helps keep this accurate in the background, and songs that come back online are only marked `ok` again once that's genuinely confirmed — so a status never flickers back and forth because of a one-off connection hiccup.
 
 ---
 
 ## <img src="https://caas.du.edu.om/wp-content/uploads/2023/09/new.gif" height="24"> Changelog
 
 > Check the in script **Home** tab for the most up-to-date changelog — new entries are added there first.
+
+**3.8**
+- 🩹 Fixed: songs coming back online could occasionally be marked `ok` a bit too early after a shaky connection check.
+- 🩹 Fixed: recovering a missing song from a playlist now cleanly removes it instead of leaving it in a confusing state.
+- 🩹 Fixed: playlist cards had text sitting a little too close to the cover art.
 
 ---
 
