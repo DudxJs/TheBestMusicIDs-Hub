@@ -205,7 +205,7 @@ The whole community helps keep this accurate in the background, and songs that c
 
 ---
 
-## <img src="https://du.edu.om" height="24"> Changelog
+## 🆕 Changelog
 
 > Check the in script **Home** tab for the most up-to-date changelog.
 
