@@ -209,11 +209,6 @@ The whole community helps keep this accurate in the background, and songs that c
 
 > Check the in script **Home** tab for the most up-to-date changelog — new entries are added there first.
 
-**3.8**
-- 🩹 Fixed: songs coming back online could occasionally be marked `ok` a bit too early after a shaky connection check.
-- 🩹 Fixed: recovering a missing song from a playlist now cleanly removes it instead of leaving it in a confusing state.
-- 🩹 Fixed: playlist cards had text sitting a little too close to the cover art.
-
 ---
 
 ## <img src="https://cdn.pixabay.com/animation/2023/04/28/18/34/18-34-10-554_512.gif" height="24"> Disclaimer
