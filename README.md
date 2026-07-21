@@ -203,14 +203,9 @@ Every song is kept up to date automatically. Each card shows its current status 
 
 The whole community helps keep this accurate in the background, and songs that come back online are only marked `ok` again once that's genuinely confirmed — so a status never flickers back and forth because of a one-off connection hiccup.
 
----
-
-## 🆕 Changelog
-
+---## <img src="https://caas.du.edu.om/wp-content/uploads/2023/09/new.gif" height="24"> Changelog
 > Check the in script **Home** tab for the most up-to-date changelog.
-
-![Próxima Versão](https://shields.io) ![Idiomas](https://shields.io)
-
+**NEXT UPDATE *v3.8***
 - Portuguese and English languages
 
 ---
