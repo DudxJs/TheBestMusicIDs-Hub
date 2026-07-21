@@ -207,7 +207,8 @@ The whole community helps keep this accurate in the background, and songs that c
 
 ## <img src="https://caas.du.edu.om/wp-content/uploads/2023/09/new.gif" height="24"> Changelog
 
-> Check the in script **Home** tab for the most up-to-date changelog — new entries are added there first.
+> Check the in script **Home** tab for the most up-to-date changelog.
+>[!alert]
 
 ---
 
