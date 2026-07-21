@@ -205,11 +205,11 @@ The whole community helps keep this accurate in the background, and songs that c
 
 ---
 
-## <img src="https://caas.du.edu.om/wp-content/uploads/2023/09/new.gif" height="24"> Changelog
+## <img src="https://du.edu.om" height="24"> Changelog
 
 > Check the in script **Home** tab for the most up-to-date changelog.
 
-### ![Próxima Versão](https://shields.io) ![Idiomas](https://shields.io)
+![Próxima Versão](https://shields.io) ![Idiomas](https://shields.io)
 
 - Portuguese and English languages
 
