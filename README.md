@@ -209,8 +209,8 @@ The whole community helps keep this accurate in the background, and songs that c
 
 > Check the in script **Home** tab for the most up-to-date changelog.
 
-**NEXT UPDATE *v3.8***
-![Status](https://shields.io)
+### ![Próxima Versão](https://shields.io) ![Idiomas](https://shields.io)
+
 - Portuguese and English languages
 
 ---
