@@ -2,84 +2,81 @@
 
 <img src="https://raw.githubusercontent.com/DudxJs/TheBestMusicIDs-Hub/refs/heads/main/assets/TheBestMusicIDs.png" alt="TheBestMusicIDs" width="480">
 
-# 🎧 TheBestMusicIDs
+# TheBestMusicIDs
 
-**A central de IDs de música para Roblox.**
-Publique, descubra e organize músicas em playlists — direto no jogo.
+**The music ID hub for Roblox.**
+Publish, discover, and organize music into playlists — directly in-game.
 
 [![Status](https://img.shields.io/badge/status-online-brightgreen)]()
-[![Versão](https://img.shields.io/badge/versão-3.7-blueviolet)]()
-[![Idiomas](https://img.shields.io/badge/idiomas-PT%20%7C%20EN-informational)]()
-
-[Instalar](#-instalação) • [Playlists](#-playlists) • [API para Devs](#-api-para-desenvolvedores) • [FAQ](#-perguntas-frequentes)
+[![Version](https://img.shields.io/badge/version-3.7-blueviolet)]()
+[![Languages](https://img.shields.io/badge/languages-EN%20%7C%20PT-informational)]()
 
 </div>
 
----
+## Table of Contents
 
-## ✨ O que é
+- [Overview](#overview)
+- [Getting Started](#getting-started)
+- [Navigation](#navigation)
+- [Playlists](#playlists)
+- [Developer API](#developer-api)
+- [FAQ](#faq)
 
-TheBestMusicIDs é uma interface completa para descobrir, publicar e organizar IDs de música dentro do Roblox. Sem sair do jogo, sem alt-tab pra procurar ID em fórum ou grupo — tudo em um só lugar, com player embutido, curtidas, perfis e playlists colaborativas.
+## Overview
 
----
+TheBestMusicIDs is a complete interface for discovering, publishing, and organizing music IDs inside Roblox. No more tabbing out to look for an ID on a forum or a group — everything lives in one place, with a built-in player, likes, profiles, and collaborative playlists.
 
-## 🚀 Instalação
+## Getting Started
 
-Execute no seu executor:
+TheBestMusicIDs runs from a single loader line:
 
 ```lua
 loadstring(game:HttpGet('https://raw.githubusercontent.com/DudxJs/TheBestMusicIDs-Hub/refs/heads/main/TheBestMusicIDs'))()
 ```
 
-Isso abre a interface principal. Nenhuma configuração adicional é necessária.
+This line always fetches the latest version straight from the repository — there's nothing to download or keep up to date on your end. The main interface opens automatically.
 
----
+## Navigation
 
-## 🧭 Navegação
-
-| Aba | O que você encontra |
+| Tab | What you'll find |
 |---|---|
-| 🏠 **Home** | Novidades, atualizações e créditos |
-| 🎵 **Músicas** | Busca, filtros por categoria e ordenação de todo o catálogo |
-| 📤 **Publicar** | Adicione sua própria música ao catálogo público |
-| 🏆 **Top 10** | Ranking das músicas e usuários mais curtidos |
+| **Home** | Latest updates and credits |
+| **Music** | Search, category filters, and sorting across the full catalog |
+| **Publish** | Add your own track to the public catalog |
+| **Top 10** | Ranking of the most-liked songs and users |
 
-Toque em qualquer música para abrir o player, curtir, ver o perfil de quem publicou ou adicioná-la a uma playlist.
+Tap any track to open the player, like it, view the publisher's profile, or add it to a playlist.
 
----
+## Playlists
 
-## 📁 Playlists
+Create your own playlists, add tracks from the catalog (or exclusive tracks that don't appear publicly), and share them with other players.
 
-Crie suas próprias playlists, adicione músicas do catálogo (ou músicas exclusivas, que não aparecem publicamente) e compartilhe com outros jogadores.
+### Create a playlist
 
-### Criar uma playlist
+1. Open the playlists menu and tap **New Playlist**.
+2. Set a name, cover image, and creator name.
+3. Add tracks from the catalog, or publish an exclusive track directly into the playlist.
 
-1. Abra o menu de playlists e toque em **Nova Playlist**.
-2. Defina nome, capa e nome do criador.
-3. Adicione músicas do catálogo ou publique uma faixa exclusiva direto na playlist.
+### Collaboration
 
-### Colaboração
+Add other players as collaborators by username — they can add and organize tracks within the same playlist.
 
-Adicione outros jogadores como colaboradores pelo nome de usuário — eles podem incluir e organizar músicas na mesma playlist.
+### Organization
 
-### Organização
+- Pin tracks to the top of the playlist.
+- Reorder by dragging.
+- Turn on shuffle in the playlist player.
 
-- Fixe músicas no topo da playlist.
-- Reordene por arraste.
-- Ative o modo aleatório no player da playlist.
+### Copy a playlist
 
-### Copiar uma playlist
+Any public playlist can be duplicated to your own account in one tap, preserving the track order.
 
-Qualquer playlist pública pode ser duplicada para a sua própria conta com um toque, preservando a ordem das músicas.
+> **Changes that require an access key**
+> Publishing a track, editing an already-published track, creating a playlist, and editing an existing playlist's info go through a key verification step. Tap **Get Key** inside the verification panel to generate your access link.
 
-> **Alterações que exigem chave de acesso**
-> Publicar música, editar uma música já publicada, criar playlist e editar informações de uma playlist existente passam por uma verificação de chave. Toque em **Pegar Key** dentro do painel de verificação para gerar seu link de acesso.
+## Developer API
 
----
-
-## 🔌 API para Desenvolvedores
-
-Além da interface, o TheBestMusicIDs expõe suas playlists para uso em outros scripts — sem precisar abrir a UI.
+Beyond the interface, TheBestMusicIDs exposes playlist data for use in your own scripts — no need to open the UI at all.
 
 ```lua
 local TMI = loadstring(game:HttpGet('https://raw.githubusercontent.com/DudxJs/ExploitUniverseStudio/refs/heads/main/TheBestMusicIDs'))()
@@ -91,42 +88,42 @@ for _, song in ipairs(songs) do
 end
 ```
 
-### Retorno
+Calling `TMI:GetPlaylist(...)` returns playlist data only — it skips opening the interface entirely.
 
-`TMI:GetPlaylist(playlistId)` retorna uma lista de músicas da playlist informada. Cada item traz:
+### Return value
 
-| Campo | Descrição |
+`TMI:GetPlaylist(playlistId)` returns a list of tracks from the given playlist. Each entry includes:
+
+| Field | Description |
 |---|---|
-| `id` | ID do áudio no Roblox |
-| `name` | Nome da música |
-| `category` | Categoria (Funk, Phonk, Rock, etc.) |
-| `status` | Situação atual do áudio (`ok`, `banned`, `private`) |
+| `id` | Roblox audio ID |
+| `name` | Track name |
+| `category` | Category (Funk, Phonk, Rock, etc.) |
+| `status` | Current audio state (`ok`, `banned`, `private`) |
 
-### O que você pode construir com isso
+### What you can build with it
 
-- Um jukebox próprio que toca direto de uma playlist do TMI.
-- Painéis in-game que exibem o catálogo de uma playlist sem depender da interface do hub.
-- Integrações com sistemas de rádio, boombox ou eventos do seu jogo.
+- A custom jukebox that plays straight from a TMI playlist.
+- In-game panels that display a playlist's catalog without depending on the hub's interface.
+- Integrations with radio systems, boomboxes, or in-game events.
 
-> ID da playlist é o mesmo identificador usado no link de compartilhamento dentro do app.
+> A playlist's ID is the same identifier used in its in-app share link.
 
----
+## FAQ
 
-## ❓ Perguntas frequentes
+**Do I need an access key to use the app?**
+No. Browsing, listening, liking, and following users is free. A key is only requested when publishing, editing, or managing playlists.
 
-**Preciso de chave de acesso pra usar o app?**
-Não. Navegar, ouvir músicas, curtir e seguir usuários é livre. A chave só é pedida para publicar, editar ou gerenciar playlists.
+**My track disappeared from the list.**
+Tracks banned or made private by Roblox are flagged automatically and stop playing — the card shows the reason.
 
-**Minha música sumiu da lista.**
-Áudios banidos ou tornados privados pelo Roblox são sinalizados automaticamente e deixam de tocar — o card mostra o motivo.
-
-**Posso usar `TMI:GetPlaylist` fora do contexto do app aberto?**
-Sim — o carregamento retorna a interface do TMI mesmo sem abrir a GUI, permitindo consumir dados de playlists por script.
+**Can I use `TMI:GetPlaylist` outside of the open app?**
+Yes — loading the script returns the TMI interface even without opening the GUI, letting you consume playlist data from your own script.
 
 ---
 
 <div align="center">
 
-Feito para a comunidade Roblox. · [Créditos e changelog](#-o-que-é)
+Built for the Roblox community.
 
 </div>
