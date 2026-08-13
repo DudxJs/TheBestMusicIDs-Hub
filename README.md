@@ -31,7 +31,7 @@ TheBestMusicIDs is a complete interface for discovering, publishing, and organiz
 TheBestMusicIDs runs from a single loader line:
 
 ```lua
-loadstring(game:HttpGet('https://raw.githubusercontent.com/DudxJs/TheBestMusicIDs-Hub/refs/heads/main/TheBestMusicIDs'))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/DudxJs/ExploitUniverseStudio/refs/heads/main/TheBestMusicIDs'))()
 ```
 
 This line always fetches the latest version straight from the repository — there's nothing to download or keep up to date on your end. The main interface opens automatically.
