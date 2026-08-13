@@ -8,7 +8,7 @@
 Publish, discover, and organize music into playlists — directly in-game.
 
 [![Status](https://img.shields.io/badge/status-online-brightgreen)]()
-[![Version](https://img.shields.io/badge/version-3.7-blueviolet)]()
+[![Version](https://img.shields.io/badge/version-3.8-blueviolet)]()
 [![Languages](https://img.shields.io/badge/languages-EN%20%7C%20PT-informational)]()
 
 </div>
