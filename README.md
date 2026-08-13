@@ -31,7 +31,7 @@ TheBestMusicIDs is a complete interface for discovering, publishing, and organiz
 TheBestMusicIDs runs from a single loader line:
 
 ```lua
-loadstring(game:HttpGet('https://raw.githubusercontent.com/DudxJs/ExploitUniverseStudio/refs/heads/main/TheBestMusicIDs'))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/DudxJs/ScriptsUniverseStudio/refs/heads/main/TheBestMusicIDs'))()
 ```
 
 This line always fetches the latest version straight from the repository — there's nothing to download or keep up to date on your end. The main interface opens automatically.
@@ -79,7 +79,7 @@ Any public playlist can be duplicated to your own account in one tap, preserving
 Beyond the interface, TheBestMusicIDs exposes playlist data for use in your own scripts — no need to open the UI at all.
 
 ```lua
-local TMI = loadstring(game:HttpGet('https://raw.githubusercontent.com/DudxJs/ExploitUniverseStudio/refs/heads/main/TheBestMusicIDs'))()
+local TMI = loadstring(game:HttpGet('https://raw.githubusercontent.com/DudxJs/ScriptsUniverseStudio/refs/heads/main/TheBestMusicIDs'))()
 
 local songs = TMI:GetPlaylist("PLAYLIST_ID_HERE")
 
