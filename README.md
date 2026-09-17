@@ -31,10 +31,12 @@ TheBestMusicIDs is a complete interface for discovering, publishing, and organiz
 TheBestMusicIDs runs from a single loader line:
 
 ```lua
-loadstring(game:HttpGet('https://raw.githubusercontent.com/DudxJs/ScriptsUniverseStudio/refs/heads/main/TheBestMusicIDs'))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/DudxJs/TheBestMusicIDs-Hub/refs/heads/main/TheBestMusicIDs'))()
 ```
 
 This line always fetches the latest version straight from the repository — there's nothing to download or keep up to date on your end. The main interface opens automatically.
+
+> Only need playlist data in your own script, without opening the interface? Skip straight to [Developer API](#developer-api) — it's a separate, lighter file made just for that.
 
 ## Navigation
 
@@ -76,10 +78,10 @@ Any public playlist can be duplicated to your own account in one tap, preserving
 
 ## Developer API
 
-Beyond the interface, TheBestMusicIDs exposes playlist data for use in your own scripts — no need to open the UI at all.
+TheBestMusicIDs ships a separate, lightweight file just for pulling playlist data into your own scripts — it doesn't touch the interface, doesn't download any UI modules, and doesn't require a key. It's a plain data endpoint.
 
 ```lua
-local TMI = loadstring(game:HttpGet('https://raw.githubusercontent.com/DudxJs/ScriptsUniverseStudio/refs/heads/main/TheBestMusicIDs'))()
+local TMI = loadstring(game:HttpGet('https://raw.githubusercontent.com/DudxJs/TheBestMusicIDs-Hub/refs/heads/main/API'))()
 
 local songs = TMI:GetPlaylist("PLAYLIST_ID_HERE")
 
@@ -88,18 +90,36 @@ for _, song in ipairs(songs) do
 end
 ```
 
-Calling `TMI:GetPlaylist(...)` returns playlist data only — it skips opening the interface entirely.
+Prefer something shorter? The loader also exposes `GetPlaylist` directly, so you don't need to keep the returned table around:
+
+```lua
+loadstring(game:HttpGet('https://raw.githubusercontent.com/DudxJs/TheBestMusicIDs-Hub/refs/heads/main/API'))()
+
+local songs = GetPlaylist("PLAYLIST_ID_HERE")
+```
+
+Both forms call the exact same function — use whichever fits your script better.
 
 ### Return value
 
-`TMI:GetPlaylist(playlistId)` returns a list of tracks from the given playlist. Each entry includes:
+`GetPlaylist(playlistId)` returns a list of tracks from the given playlist. Each entry includes:
 
 | Field | Description |
 |---|---|
-| `id` | Roblox audio ID |
+| `id` | Roblox audio ID — only included if the playlist owner enabled ID export |
 | `name` | Track name |
 | `category` | Category (Funk, Phonk, Rock, etc.) |
 | `status` | Current audio state (`ok`, `banned`, `private`) |
+
+The returned table also carries a few named fields alongside the track list (these don't interfere with `ipairs()`):
+
+| Field | Description |
+|---|---|
+| `playlistId` | The ID you passed in |
+| `ownerName` | Display name of the playlist's owner |
+| `requireCredits` | `true` if the owner asked integrators to credit TheBestMusicIDs |
+
+If a playlist doesn't exist, is private, or has developer access turned off, `GetPlaylist` returns an empty table and logs the reason with `warn(...)` — no exceptions are thrown, so it's always safe to iterate the result directly.
 
 ### What you can build with it
 
@@ -117,8 +137,8 @@ No. Browsing, listening, liking, and following users is free. A key is only requ
 **My track disappeared from the list.**
 Tracks banned or made private by Roblox are flagged automatically and stop playing — the card shows the reason.
 
-**Can I use `TMI:GetPlaylist` outside of the open app?**
-Yes — loading the script returns the TMI interface even without opening the GUI, letting you consume playlist data from your own script.
+**Do I need to open the full app to use the Developer API?**
+No — the API file is completely separate from the main loader. It never opens the interface, downloads UI modules, or asks for a key; it only fetches playlist data.
 
 ---
 
