@@ -69,6 +69,10 @@ Add other players as collaborators by username — they can add and organize tra
 - Reorder by dragging.
 - Turn on shuffle in the playlist player.
 
+### Privacy & access password
+
+A playlist can be set to **Private**, restricting it to its owner and authorized collaborators. When a playlist is private, its owner can optionally generate an **access password** and toggle **Allow password use** — this lets external scripts (via the [Developer API](#developer-api)) read the playlist without making it fully public. The password only unlocks read access if the owner also has **Available for DEV** turned on; if that's off, the password has no effect.
+
 ### Copy a playlist
 
 Any public playlist can be duplicated to your own account in one tap, preserving the track order.
@@ -100,9 +104,19 @@ local songs = GetPlaylist("PLAYLIST_ID_HERE")
 
 Both forms call the exact same function — use whichever fits your script better.
 
+### Accessing a private playlist
+
+If a playlist is **private** and its owner has generated an access password (see [Privacy & access password](#privacy--access-password)), pass it as the second argument:
+
+```lua
+local songs = TMI:GetPlaylist("PLAYLIST_ID_HERE", "the_access_password")
+```
+
+Public playlists (and private ones you don't have a password for) work the same as always — just omit the second argument.
+
 ### Return value
 
-`GetPlaylist(playlistId)` returns a list of tracks from the given playlist. Each entry includes:
+`GetPlaylist(playlistId, password?)` returns a list of tracks from the given playlist. Each entry includes:
 
 | Field | Description |
 |---|---|
@@ -119,7 +133,32 @@ The returned table also carries a few named fields alongside the track list (the
 | `ownerName` | Display name of the playlist's owner |
 | `requireCredits` | `true` if the owner asked integrators to credit TheBestMusicIDs |
 
-If a playlist doesn't exist, is private, or has developer access turned off, `GetPlaylist` returns an empty table and logs the reason with `warn(...)` — no exceptions are thrown, so it's always safe to iterate the result directly.
+### Error handling
+
+If a playlist can't be returned — it doesn't exist, is private, has developer access turned off, or the wrong password was provided — `GetPlaylist` returns an empty table and logs a message with `warn(...)`. No exceptions are thrown, so it's always safe to iterate the result directly.
+
+The returned table also carries a structured `error` field you can branch on in code, instead of parsing console output:
+
+```lua
+local songs = TMI:GetPlaylist("PLAYLIST_ID_HERE", "maybe_wrong_password")
+
+if songs.error then
+    print(songs.error.code)    -- e.g. "invalid_password"
+    print(songs.error.message) -- human-readable, English
+end
+```
+
+| Code | Meaning |
+|---|---|
+| `invalid_argument` | The playlist ID argument is missing or has the wrong type |
+| `unsupported_executor` | Your executor doesn't support HTTP requests |
+| `network_error` | The request to the playlist service failed |
+| `not_found` | No playlist exists with that ID |
+| `dev_disabled` | The owner turned off third-party (**Available for DEV**) access |
+| `private` | The playlist is private and no password was provided |
+| `password_disabled` | A password was provided, but the owner hasn't enabled password-based access for this playlist |
+| `invalid_password` | A password was provided but doesn't match |
+| `unexpected_response` | The server returned something the client doesn't recognize |
 
 ### What you can build with it
 
@@ -139,6 +178,9 @@ Tracks banned or made private by Roblox are flagged automatically and stop playi
 
 **Do I need to open the full app to use the Developer API?**
 No — the API file is completely separate from the main loader. It never opens the interface, downloads UI modules, or asks for a key; it only fetches playlist data.
+
+**Can I read a private playlist through the Developer API?**
+Only if its owner generated an access password and turned on both **Allow password use** and **Available for DEV** for that playlist. Otherwise `GetPlaylist` returns an error — check `songs.error.code` (`private`, `password_disabled`, or `invalid_password`) to see exactly why.
 
 ---
 
